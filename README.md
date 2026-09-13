@@ -38,11 +38,40 @@ $$\frac{dL}{dt} = -\gamma L + \delta \left(\frac{a H}{1 + a h H}\right) L$$
 
 ## Key Results & Parameter Fitting
 
-* **Parameter Optimization:** Non-linear least squares regression was implemented using `scipy.optimize` to estimate handling time ($h \approx 0.1096$) and search/capture rate ($a \approx 0.1106$) against empirical data.
-* **Dynamic Stability:** Adding prey carrying capacity ($K \approx 152.65$) arrested artificial runaway explosions caused by pure Type II responses, restoring realistic cyclic dynamics.
+### 1. Non-Linear Parameter Estimation
+Non-linear least squares regression was applied using `scipy.optimize` to calibrate Holling’s Type II functional response against empirical consumption records[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span):
+* **Capture rate ($a$):** $0.1106$[span_2](start_span)[span_2](end_span)
+* **Handling time ($h$):** $0.1096$[span_3](start_span)[span_3](end_span)
 
-*(Add your generated comparison plots here)*
-`![Dynamic Stability](figures/stabilized_dynamics.png)`
+<p align="center">
+  <img src="figures/Estimating a and h using Nonlinear least squares.png" width="70%" alt="Nonlinear Least Squares Fitting">
+</p>
+
+---
+
+### 2. Identifying Destabilisation (Appetite Saturation Alone)
+Directly substituting the Type II functional response without resource limits introduces a destabilising feedback loop[span_4](start_span)[span_4](end_span). Because predator feeding rate saturates at high prey density, hares experience unchecked growth, triggering an artificial population explosion (~1903) followed by dynamic collapse[span_5](start_span)[span_5](end_span):
+
+<p align="center">
+  <img src="figures/Dynamics - Functional Response.png" width="85%" alt="Functional Response Dynamics">
+</p>
+
+---
+
+### 3. Restoring Dynamic Stability with Carrying Capacity
+Introducing a logistic carrying capacity ($K = 152.65$) to the prey dynamics arrests the unconstrained spikes, restoring bounded, realistic cyclic oscillations that match the empirical Hudson's Bay pelt records[span_6](start_span)[span_6](end_span):
+
+<p align="center">
+  <img src="figures/Dynamics - Nonlinear growth.png" width="85%" alt="Stabilised Dynamics">
+</p>
+
+#### Residual Analysis
+Predictive performance was verified across the 90-year time series, tracking error residuals between empirical historical counts and the coupled non-linear model:
+
+<p align="center">
+  <img src="figures/Residuals - Nonlinear Growth.png" width="100%" alt="Residual Analysis">
+</p>
+
 
 ---
 
