@@ -43,26 +43,27 @@ Non-linear least squares regression was applied using `scipy.optimize` to calibr
 * **Capture rate ($a$):** $0.1106$[span_2](start_span)[span_2](end_span)
 * **Handling time ($h$):** $0.1096$[span_3](start_span)[span_3](end_span)
 
-![Nonlinear Least Squares Fitting](figures/Estimating%20a%20and%20h%20using%20Nonlinear%20least%20squares.png)
+![Nonlinear Least Squares Fitting](./figures/least-squares-fit.png)
 
 ---
 
 ### 2. Identifying Destabilisation (Appetite Saturation Alone)
 Directly substituting the Type II functional response without resource limits introduces a destabilising feedback loop[span_4](start_span)[span_4](end_span). Because predator feeding rate saturates at high prey density, hares experience unchecked growth, triggering an artificial population explosion (~1903) followed by dynamic collapse[span_5](start_span)[span_5](end_span):
 
-![Functional Response Dynamics](figures/Dynamics%20-%20Functional%20Response.png)
+![Functional Response Dynamics](./figures/functional-response-spikes.png)
 
 ---
 
 ### 3. Restoring Dynamic Stability with Carrying Capacity
 Introducing a logistic carrying capacity ($K = 152.65$) to the prey dynamics arrests the unconstrained spikes, restoring bounded, realistic cyclic oscillations that match the empirical Hudson's Bay pelt records[span_6](start_span)[span_6](end_span):
 
-![Stabilised Dynamics](figures/Dynamics%20-%20Nonlinear%20growth.png)
+![Stabilised Dynamics](./figures/nonlinear-growth-stable.png)
 
 #### Residual Analysis
 Predictive performance was verified across the 90-year time series, tracking error residuals between empirical historical counts and the coupled non-linear model:
 
-![Residual Analysis](figures/Residuals%20-%20Nonlinear%20Growth.png)
+![Residual Analysis](./figures/residuals-nonlinear-growth.png)
+
 
 ---
 
