@@ -43,35 +43,26 @@ Non-linear least squares regression was applied using `scipy.optimize` to calibr
 * **Capture rate ($a$):** $0.1106$[span_2](start_span)[span_2](end_span)
 * **Handling time ($h$):** $0.1096$[span_3](start_span)[span_3](end_span)
 
-<p align="center">
-  <img src="figures/Estimating a and h using Nonlinear least squares.png" width="70%" alt="Nonlinear Least Squares Fitting">
-</p>
+![Nonlinear Least Squares Fitting](figures/Estimating%20a%20and%20h%20using%20Nonlinear%20least%20squares.png)
 
 ---
 
 ### 2. Identifying Destabilisation (Appetite Saturation Alone)
 Directly substituting the Type II functional response without resource limits introduces a destabilising feedback loop[span_4](start_span)[span_4](end_span). Because predator feeding rate saturates at high prey density, hares experience unchecked growth, triggering an artificial population explosion (~1903) followed by dynamic collapse[span_5](start_span)[span_5](end_span):
 
-<p align="center">
-  <img src="figures/Dynamics - Functional Response.png" width="85%" alt="Functional Response Dynamics">
-</p>
+![Functional Response Dynamics](figures/Dynamics%20-%20Functional%20Response.png)
 
 ---
 
 ### 3. Restoring Dynamic Stability with Carrying Capacity
 Introducing a logistic carrying capacity ($K = 152.65$) to the prey dynamics arrests the unconstrained spikes, restoring bounded, realistic cyclic oscillations that match the empirical Hudson's Bay pelt records[span_6](start_span)[span_6](end_span):
 
-<p align="center">
-  <img src="figures/Dynamics - Nonlinear growth.png" width="85%" alt="Stabilised Dynamics">
-</p>
+![Stabilised Dynamics](figures/Dynamics%20-%20Nonlinear%20growth.png)
 
 #### Residual Analysis
 Predictive performance was verified across the 90-year time series, tracking error residuals between empirical historical counts and the coupled non-linear model:
 
-<p align="center">
-  <img src="figures/Residuals - Nonlinear Growth.png" width="100%" alt="Residual Analysis">
-</p>
-
+![Residual Analysis](figures/Residuals%20-%20Nonlinear%20Growth.png)
 
 ---
 
